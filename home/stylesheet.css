@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Home Page</title>
-<style>
-     
-    body {
+body {
         margin: 0;
         padding: 0;
         background: url('background.jpg') ;
@@ -70,39 +62,18 @@
             width: 120px;
             height: 120px;
         }
-    }    
-</style>
-</head>
-<body>
+    }   
+    #profile-table {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+     
+        background-color: rgba(255, 255, 255, 0.1);
     
-    <h1 id="title">WELCOME to the Home Page</h1>
-    <h2>Your Profile</h2>
-    <img src="background.jpg" alt="Background Image" style="width: 100%; height: 100vh; position: absolute; top: 0; left: 0; z-index: -1;">
-
-
-    <img id="profile-pic" src="default.jpg" alt="Profile Picture">
-    <input type="file" id="upload" accept="image/*">
-
-    <script>
-    
-    const savedImage = localStorage.getItem("profilePic");
-    if (savedImage) {
-    document.getElementById("profile-pic").src = savedImage;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
     }
-
-    document.getElementById("upload").addEventListener("change", function(e) {
-        const file = e.target.files[0];
-        if (file) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-        const imgSrc = event.target.result;
-        document.getElementById("profile-pic").src = imgSrc;
-        localStorage.setItem("profilePic", imgSrc); 
-        };
-        reader.readAsDataURL(file);
-    }
-    });
-    </script>
-
-</body>
-</html>
