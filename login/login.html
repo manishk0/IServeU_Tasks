@@ -17,21 +17,20 @@
             <form action="#">
                 <label for="username">Username</label>
                 <input type="text" id="username" placeholder="Username" required />
-                
+            
                 <label for="password">Password</label>
-                <div class="password-input-container">
+                <section class="password-input-container">
                     <input
-                        [type]="passwordVisible ? 'text' : 'password'"
+                        type="password"
                         id="password"
                         placeholder="Password"
                         required
                     />
                     <i
-                    (onclick)="togglePasswordVisibility()"
                         class="far fa-eye toggle-password"
                         id="togglePassword"
                     ></i>
-                </div>
+                </section>
                 
                 <button type="submit">Login</button>
             </form>
