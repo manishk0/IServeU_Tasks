@@ -1,0 +1,48 @@
+<div class="blog-container">
+  
+  <!-- Profile Picture Area -->
+  <div class="profile-section">
+    <img src="assets/image.jpg" alt="Profile Picture" class="profile-pic">
+    <button mat-button color="primary" >Upload</button>
+  </div>
+
+  <!-- Main Blog Form -->
+  <div class="blog-form">
+    <!-- Heading -->
+    <h1>Blog page </h1>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Blog Heading</mat-label>
+      <input matInput placeholder="Enter blog title">
+    </mat-form-field>
+
+    <!-- Date Picker -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Select Date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Description -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput rows="5" placeholder="Write your blog content..."></textarea>
+    </mat-form-field>
+
+    <!-- Category -->
+    <mat-form-field appearance="fill" class="Category">
+      <mat-label>Category</mat-label>
+      <mat-select>
+        <mat-option value="tech">Technology</mat-option>
+        <mat-option value="travel">Travel</mat-option>
+        <mat-option value="food">Food</mat-option>
+        <mat-option value="lifestyle">Lifestyle</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Buttons -->
+    <div class="button-group">
+      <button mat-raised-button color="primary">Submit</button>
+    </div>
+</div>
+</div>
